@@ -111,7 +111,7 @@ Rdo_get_arg <- function(rd,arg){
 Rdo_args2txt_list <- function(x,arg,...){
     rdo <- Rd_fun(x)
     if(missing(arg)){
-        tmparg <- tools:::.Rd_get_argument_names(rdo)
+        tmparg <- .Rd_get_argument_names(rdo) # tools:::.Rd_get_argument_names(rdo)
 
         # correct for merged descriptions...
         arg <- character(0)
