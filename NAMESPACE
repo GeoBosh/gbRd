@@ -1,4 +1,5 @@
-# exportPattern("^[[:alpha:]]+")
+import(tools)
+
 export(
 Rd_args
 , Rd_fun

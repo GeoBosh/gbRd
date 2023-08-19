@@ -187,10 +187,10 @@ Rd_fun <- function(x, topic, pkgname   = ""
                     , keep_section     = TRUE
                    ){
     rdo <- NULL         # prepare the "Rd" object rdo; # is it better to check with "inherit"?
-    if(class(x) == "Rd"){  # if(inherits(file, "Rd")) ...
+    if(inherits(x, "Rd")){ # class(x) == "Rd"  # if(inherits(file, "Rd")) ...
         rdo <- x
     }else{
-        if(class(x) != "help_files_with_topic" ){
+        if(!inherits(x, "help_files_with_topic")){ # class(x) != "help_files_with_topic" 
                # The following comments baffle me now. Does `do.call' resolve the issues?
                #
                # help returns an object of class "help_files_with_topic" the
@@ -214,7 +214,7 @@ Rd_fun <- function(x, topic, pkgname   = ""
         }
         ## Check for errors! ???
 
-        if(class(x) == "help_files_with_topic"){
+        if(inherits(x, "help_files_with_topic")){  # class(x) == "help_files_with_topic"
                                                   # from print.help_files_with_topic in help.R
                                                   #
                                                   # browser <- getOption("browser")
