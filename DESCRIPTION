@@ -1,7 +1,7 @@
 Package: gbRd
 Type: Package
 Title: Utilities for Processing Rd Objects and Files
-Version: 0.4-12
+Version: 0.4.12
 Author: Georgi N. Boshnakov
 Maintainer: Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>
 Description: Provides utilities for processing Rd objects and files.
