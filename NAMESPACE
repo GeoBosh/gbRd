@@ -1,4 +1,4 @@
-import(tools)
+importFrom(tools, Rd2txt, Rd2txt_options)
 
 export(
 Rd_args

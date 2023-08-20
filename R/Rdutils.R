@@ -154,7 +154,7 @@ Rd_help2txt <- function(x, topic, pkgname=""
                   , keep_section     = keep_section
                   )
 
-    temp <- tools::Rd2txt(rdo, out=tempfile("Rtxt"), package=pkgname)
+    temp <- Rd2txt(rdo, out=tempfile("Rtxt"), package=pkgname)
 
     res <- readLines(temp) # note: temp is a (temporary) file name.
     unlink(temp)
