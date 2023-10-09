@@ -302,3 +302,13 @@ function (filebase, key = NULL)
         res
     else invisible(res)
 }
+
+.Rd_get_argument_names <- local({
+    f <- function(x,y) NULL
+    function(x){
+        ## if(is.null(f))
+        if(length(formals(f)) > 1)
+            f <<- utils::getFromNamespace(".Rd_get_argument_names", "tools")
+        f(x)
+    }
+})
